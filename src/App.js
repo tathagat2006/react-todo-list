@@ -16,7 +16,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          A simple Todo List Application.
         </a>
       </header>
     </div>
