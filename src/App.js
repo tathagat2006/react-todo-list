@@ -1,26 +1,21 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import todos from './data'
+import ListTodos from './components/ListTodos'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          A simple Todo List Application.
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  state = {
+    todos: todos
+  }
+
+  render() {
+    return (
+      <div>
+        <ListTodos todos={this.state.todos} />
+      </div>
+    )
+  }
 }
 
 export default App;
